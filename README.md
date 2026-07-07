@@ -54,3 +54,25 @@ aws-docker-terraform-project/
 ├── screenshots/
 ├── .gitignore
 └── README.md
+
+
+##    Architecture
+                Developer
+                    │
+                git push
+                    │
+                    ▼
+          GitHub Repository
+                    │
+            GitHub Actions
+                    │
+                 SSH Login
+                    ▼
+             AWS EC2 Instance
+                    │
+          Docker Container
+                    │
+               Nginx Server
+                    │
+                    ▼
+          Portfolio Website
