@@ -76,3 +76,60 @@ aws-docker-terraform-project/
                     │
                     ▼
           Portfolio Website
+
+## ⚙️ Prerequisites
+
+Before running this project, ensure you have:
+
+- AWS Account
+- Terraform Installed
+- Docker Installed
+- Git Installed
+- AWS CLI Configured
+- SSH Key Pair
+
+## 🚀 Deployment Steps
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/mxdalll/aws-docker-terraform-project.git
+```
+
+2. Navigate to the Terraform directory
+
+```bash
+cd terraform
+```
+
+3. Initialize Terraform
+
+```bash
+terraform init
+```
+
+4. Validate the configuration
+
+```bash
+terraform validate
+```
+
+5. Create the infrastructure
+
+```bash
+terraform apply
+```
+
+6. Access the EC2 instance
+
+```bash
+ssh -i your-key.pem ec2-user@<EC2_PUBLIC_IP>
+```
+
+7. Build and run Docker
+
+```bash
+cd app
+sudo docker build -t portfolio .
+sudo docker run -d -p 80:80 --name portfolio-container portfolio
+```
