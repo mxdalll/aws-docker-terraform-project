@@ -133,3 +133,85 @@ cd app
 sudo docker build -t portfolio .
 sudo docker run -d -p 80:80 --name portfolio-container portfolio
 ```
+
+## 🔄 CI/CD Workflow
+
+The project uses GitHub Actions to automate deployments.
+
+Workflow:
+
+Developer
+    │
+git push
+    │
+    ▼
+GitHub Repository
+    │
+GitHub Actions
+    │
+SSH into EC2
+    │
+git pull
+    │
+Docker Build
+    │
+Restart Container
+    │
+Updated Portfolio Website
+
+## 📸 Screenshots
+
+- GitHub Repository
+- GitHub Actions
+- EC2 Instance
+- Security Group
+- Terraform Apply
+- Docker Container
+- Portfolio Website
+
+## 🐞 Troubleshooting
+
+During this project, the following issues were resolved:
+
+- Terraform resource reference errors
+- AMI lookup issues
+- Free Tier instance compatibility
+- SSH key pair configuration
+- SCP permission issues
+- Git large file errors (.terraform)
+- Git remote conflicts
+- GitHub Actions formatting errors
+- Docker daemon issues
+- EC2 Security Group configuration
+- CI/CD deployment pipeline configuration
+
+## 📈 Future Improvements
+
+- Deploy using AWS ECS
+- Add Application Load Balancer
+- Use Terraform Remote State
+- Configure a Custom Domain
+- Enable HTTPS with ACM
+- Add Monitoring using CloudWatch
+
+## 📸 Screenshots
+
+### GitHub Repository
+
+![GitHub Repository](screenshots/01-github-repo.png)
+
+### GitHub Actions
+
+![GitHub Actions](screenshots/02-github-actions.png)
+
+### AWS EC2 Instance
+
+![EC2](screenshots/03-ec2.png)
+
+### Portfolio Website
+
+![Website](screenshots/04-website.png)
+
+
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7a5c11fa-7a78-4515-b0c9-df25700cae8b" />
