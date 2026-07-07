@@ -35,13 +35,22 @@ The infrastructure is provisioned using Terraform, the application is containeri
 
 ## 📂 Project Structure
 
-```text
 aws-docker-terraform-project/
 │
-├── app/
-├── terraform/
 ├── .github/
 │   └── workflows/
+│       ├── deploy.yml
+│       └── deploy-app.yml
+├── app/
+│   ├── Dockerfile
+│   ├── index.html
+│   └── style.css
+├── terraform/
+│   ├── main.tf
+│   ├── provider.tf
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── versions.tf
 ├── screenshots/
+├── .gitignore
 └── README.md
-```
